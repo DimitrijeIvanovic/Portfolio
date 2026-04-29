@@ -1,4 +1,5 @@
 import express from "express";
+import ejs from "ejs";
 import path from "path";
 
 const app = express();
@@ -11,9 +12,15 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.get("/", (req, res) => {
   res.render("index", {
     name: "Dimitrije Ivanovic",
-    title: "Over Mij",
-    bio: "Ik ben Dimitrije (Dimi), 22 jaar oud en studeer programmeren op AP Hogeschool in Antwerpen, mijn droom is om zo veel mogelijk te leren over IT en een mooie job te hebben.",
+    title: "Portfolio",
+    role: "Student Developer",
+    bio: "Ik ben Dimitrije (Dimi), 22 jaar oud en studeer programmeren op AP Hogeschool in Antwerpen, mijn droom is om zo veel mogelijk te groeien als persoon.",
     skills: ["Typescript", "C#", "Docker", "Linux", "Cisco", "Cool zijn"],
+    email: "dimitrijeivanovic24@gmail.com",
+    socials: {
+      github: "https://github.com/DimitrijeIvanovic",
+      linkedin: "https://www.linkedin.com/in/dimitrije-ivanovic-b94139356/",
+    },
   });
 });
 
