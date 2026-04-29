@@ -26,8 +26,8 @@
                 <h3 class="text-2xl font-semibold mb-6">I'm a <span class="text-gray-700"><%= role %></span></h3>
                 <p class="text-gray-500 mb-8"><%= bio %></p>
                 <div class="flex gap-4 mb-8">
-                    <a href="<%= socials.github %>" class="border-2 border-amber-600 text-amber-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-600 hover-text-white transition">GH</a>
-                    <a href="<%= socials.linkedin %>" class="border-2 border-amber-600 text-amber-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-600 hover-text-white transition">LI</a>
+                    <a href="<%= socials.github %>" target="_blank" class="border-2 border-amber-600 text-amber-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-600 hover-text-white transition">GH</a>
+                    <a href="<%= socials.linkedin %>" target="_blank" class="border-2 border-amber-600 text-amber-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-600 hover-text-white transition">LI</a>
                 </div>
                 <a href="#contact" class="bg-amber-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition">Contact Me</a>
             </div>
@@ -52,7 +52,7 @@
           <section id="contact" class="px-16 py-16 text-center">
             <h2 class="text-4xl font-bold mb-4 text-amber-900">Contact</h2>
             <p class="text-gray-500 mb-6"><%= email %></p>
-            <a href="mailto:<%= email %>" class="bg-amber-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition">Send me a mail</a>
+            <a href="mailto:<%= email %>" target="_blank" class="bg-amber-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition">Send me a mail</a>
           </section>
   </body>
 </html>
