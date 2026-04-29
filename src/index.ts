@@ -15,7 +15,16 @@ app.get("/", (req, res) => {
     title: "Portfolio",
     role: "Student Developer",
     bio: "Ik ben Dimitrije (Dimi), 22 jaar oud en studeer programmeren op AP Hogeschool in Antwerpen, mijn droom is om zo veel mogelijk te groeien als persoon.",
-    skills: ["Typescript", "C#", "Docker", "Linux", "Cisco", "Cool zijn"],
+    pfp: "/pfp.jpg",
+    skills: [
+      "HTML/EJS",
+      "CSS/Tailwind",
+      "Typescript",
+      "C#",
+      "Docker",
+      "Linux",
+      "Cisco Packet Tracer",
+    ],
     email: "dimitrijeivanovic24@gmail.com",
     socials: {
       github: "https://github.com/DimitrijeIvanovic",

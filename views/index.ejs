@@ -6,27 +6,53 @@
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
   </head>
-  <body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+  <body class="bg-amber-50 text-gray-800 min-h-screen">
 
-    <nav class="flex justify-between items-center px-16 py-6">
-        <h1 class="text-2x1 font-bold">Welcome to my portfolio</h1>
-        <ul class="flex gap-8 text-gray-300">
-            <li><a href="#home" class="text-cyan-400 font-medium">Home</a></li>
-            <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
-            <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
-            <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
-        </ul>
-    </nav>
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center px-16 py-6">
+            <h1 class="text-2xl font-bold">Welcome to my portfolio!</h1>
+            <ul class="flex gap-8 text-amber-900">
+                <li><a href="#home" class="text-amber-700 font-medium">Home</a></li>
+                <li><a href="#about" class="hover:text-amber-700 transition">About</a></li>
+                <li><a href="#skills" class="hover:text-amber-700 transition">Skills</a></li>
+                <li><a href="#contact" class="hover:text-amber-700 transition">Contact</a></li>
+            </ul>
+        </nav>
 
-    <div class="max-w-2x1 mx-auto p-8 text-center">
-        <img src="../assets/04cfb131-0872-496c-a841-6195765aa23c.jpg" alt="Dimitrije Ivanovic">
-        <h1 class="text-4xl font-bold mb-4"><%= name %></h1>
-        <p class="text-gray-300 text-lg mb-8"><%= bio %></p>
-        <div class="flex flex-wrap justify-center gap-3">
-            <% skills.forEach(skill => { %>
-                <span class="bg-blue-600 px-4 py-2 rounded-full text-sm font-medium"><%= skill %></span>
-            <% }) %>
-        </div>
-    </div>
+        <!-- Info -->
+        <section id="info" class="flex items-center justify-between px-16 py-20">
+            <div class="max-w-lg">
+                <h2 class="text-6xl font-bold mb-3 text-amber-900"><%= name %></h2>
+                <h3 class="text-2xl font-semibold mb-6">I'm a <span class="text-gray-700"><%= role %></span></h3>
+                <p class="text-gray-500 mb-8"><%= bio %></p>
+                <div class="flex gap-4 mb-8">
+                    <a href="<%= socials.github %>" class="border-2 border-amber-600 text-amber-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-600 hover-text-white transition">GH</a>
+                    <a href="<%= socials.linkedin %>" class="border-2 border-amber-600 text-amber-600 rounded-full w-10 h-10 flex items-center justify-center hover:bg-amber-600 hover-text-white transition">LI</a>
+                </div>
+                <a href="#contact" class="bg-amber-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition">Contact Me</a>
+            </div>
+            
+            <!-- Pfp -->
+            <div class="relative">
+                <img src="<%= pfp %>" alt="_blank" class="w-72 h-72 rounded-full object-cover shadow-lg border-4 border-amber-200">
+            </div>
+        </section>
+
+        <!-- Skills -->
+         <section id="skills" class="px-16 py-16 bg-amber-100">
+            <h2 class="text-4xl font-bold mb-10 text-center text-amber-900">Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <% skills.forEach(skill => { %>
+                    <span class="border-2 border-amber-600 text-amber-700 px-6 py-2 rounded-full text-sm font-medium hover:bg-amber-600 hover:text-white transition"><%= skill %></span>
+                <% }) %>
+            </div>
+         </section>
+
+         <!-- Contact -->
+          <section id="contact" class="px-16 py-16 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-amber-900">Contact</h2>
+            <p class="text-gray-500 mb-6"><%= email %></p>
+            <a href="mailto:<%= email %>" class="bg-amber-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-amber-500 transition">Send me a mail</a>
+          </section>
   </body>
 </html>
