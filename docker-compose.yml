@@ -2,5 +2,5 @@ services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - "4300:4300"
     restart: unless-stopped
