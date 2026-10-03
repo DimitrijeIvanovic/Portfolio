@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white px-5 font-sans text-base leading-[1.65] text-ink;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  a {
+    @apply text-accent hover:text-accent-dark;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto max-w-wrap;
+  }
+  .section {
+    @apply py-14;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-[7px] border border-transparent px-[22px] py-3 font-display text-[15px] font-semibold;
+  }
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-dark hover:text-white;
+  }
+  .btn-secondary {
+    @apply border-line text-ink hover:border-accent hover:text-accent;
+  }
+  .chip {
+    @apply rounded-full border border-line bg-white px-[13px] py-1.5 text-sm text-ink;
+  }
+  .chip-learning {
+    @apply border-accent bg-accent-soft text-accent-dark;
+  }
+  .contact-link {
+    @apply inline-flex items-center gap-2 rounded-[7px] border border-white/20 bg-white/10 px-[18px] py-[11px] text-[14.5px] font-semibold text-white hover:bg-white/15 hover:text-white;
+  }
+}

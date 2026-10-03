@@ -1,0 +1,9 @@
+<div class="grid grid-cols-1 gap-1.5 min-[621px]:grid-cols-[160px_1fr] min-[621px]:gap-5">
+  <span class="whitespace-nowrap text-sm font-semibold text-muted"><%= period %></span>
+  <div>
+    <h3 class="mb-1 font-display text-[16.5px] font-bold"><%= title %></h3>
+    <% if (typeof description !== "undefined") { %>
+      <p class="text-[15px] text-muted"><%= description %></p>
+    <% } %>
+  </div>
+</div>

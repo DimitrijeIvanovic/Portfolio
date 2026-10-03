@@ -1,0 +1,46 @@
+<section class="section" id="projects">
+  <div class="wrap">
+    <%- include("section-head", {
+      kicker: "Projecten",
+      title: "Wat ik gebouwd heb",
+      lead: "Vier eigen projecten, elk gekoppeld aan een vak of een teamopdracht aan AP Hogeschool."
+    }) %>
+
+    <div class="grid grid-cols-1 gap-5 min-[621px]:grid-cols-2">
+      <%- include("project-card", {
+        type: "Individueel project",
+        name: "project-webontwikkeling",
+        description: "Volledige CRUD-webapp met zoeken, sorteren en rolgebaseerde (admin/gebruiker) rechten voor bewerking. Sessies en bcrypt voor authenticatie.",
+        tags: ["TypeScript", "Express", "EJS", "MongoDB"],
+        links: [
+          { label: "GitHub", url: "https://github.com/DimitrijeIvanovic/project-webontwikkeling" },
+          { label: "Live demo", url: "https://project-webontwikkeling-dimitrijeivanovic.onrender.com" }
+        ]
+      }) %>
+
+      <%- include("project-card", {
+        type: "Groepsproject",
+        name: "GameHub",
+        description: "Game-ontdekkingsplatform gebouwd met twee medestudenten. Games vergelijken via de RAWG API, sessiegebaseerde login en een \"Guess That Game\"-modus.",
+        tags: ["TypeScript", "Express", "MongoDB", "Docker"],
+        links: [{ label: "GitHub", url: "https://github.com/DimitrijeIvanovic/IT-zo" }]
+      }) %>
+
+      <%- include("project-card", {
+        type: "Individueel project",
+        name: "Bib",
+        description: "Console-applicatie voor bibliotheekbeheer, gebouwd rond interfaces, abstracte klassen en custom exceptions voor invoervalidatie.",
+        tags: ["C#"],
+        links: [{ label: "GitHub", url: "https://github.com/DimitrijeIvanovic/bib" }]
+      }) %>
+
+      <%- include("project-card", {
+        type: "Individueel project",
+        name: "Skivakantie-database",
+        description: "Relationeel databankproject in drie deelopdrachten — van basistabellen tot views, stored procedures met transacties en een stored function.",
+        tags: ["MySQL"],
+        links: [{ label: "GitHub", url: "https://github.com/DimitrijeIvanovic/skivakantie-database" }]
+      }) %>
+    </div>
+  </div>
+</section>

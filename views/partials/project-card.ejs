@@ -1,0 +1,15 @@
+<article class="flex min-w-0 flex-col gap-3 rounded-[10px] border border-line bg-white p-6 transition hover:border-accent hover:shadow-[0_4px_16px_rgba(14,122,110,0.08)]">
+  <span class="text-xs font-semibold tracking-[.01em] text-accent"><%= type %></span>
+  <h3 class="font-display text-lg font-bold"><%= name %></h3>
+  <p class="text-[15px] text-muted"><%= description %></p>
+  <div class="flex flex-wrap gap-1.5">
+    <% tags.forEach(tag => { %>
+      <span class="rounded-[5px] border border-line bg-surface px-[9px] py-[3px] text-[12.5px] text-muted"><%= tag %></span>
+    <% }) %>
+  </div>
+  <div class="mt-auto flex gap-4 text-sm font-semibold">
+    <% links.forEach(link => { %>
+      <a href="<%= link.url %>" target="_blank" rel="noopener"><%= link.label %></a>
+    <% }) %>
+  </div>
+</article>
